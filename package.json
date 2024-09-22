@@ -1,0 +1,11 @@
+{
+  "bin": {
+    "hydra": "scripts/hydra"
+  },
+  "scripts": {
+    "prepare": "docker compose up --build -d"
+  },
+  "devDependencies": {
+    "bootstrap": "link:"
+  }
+}
