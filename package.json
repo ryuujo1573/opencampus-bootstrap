@@ -3,7 +3,7 @@
     "hydra": "scripts/hydra"
   },
   "scripts": {
-    "prepare": "docker compose up --build -d"
+    "start": "docker compose up --build -d"
   },
   "devDependencies": {
     "bootstrap": "link:"
