@@ -1,9 +1,8 @@
 {
-  "bin": {
-    "hydra": "scripts/hydra"
-  },
+  "type": "module",
   "scripts": {
-    "start": "docker compose up --build -d"
+    "start": "docker compose -f compose.yaml -f compose.caddy.yaml -f compose.loki.yaml up --build -d",
+    "caddy": "docker exec -w /etc/caddy caddy caddy"
   },
   "devDependencies": {
     "bootstrap": "link:"

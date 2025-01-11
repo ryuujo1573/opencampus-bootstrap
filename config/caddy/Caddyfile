@@ -1,0 +1,15 @@
+{
+	debug
+}
+
+localhost {
+	reverse_proxy * {
+		to http://host.docker.internal:4455
+	}
+	# respond "hello"
+
+	handle_path /api/kratos/* {
+		rewrite * /{path}
+		reverse_proxy kratos:4433
+	}
+}
